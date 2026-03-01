@@ -2,39 +2,40 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK5C9YTBX4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-RK5C9YTBX4');
     </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Professional Portfolio of Sachin Sudhakar Thokal - A passionate DevOps Engineer focused on automation and continuous integration">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Sachin Thokal | Portfolio</title>
 
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
-
     <link rel="manifest" href="assets/images/favicon/site.webmanifest">
-
     <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        /* --- Professional Color Palette --- */
         :root {
             --primary: #02071a;
-            --accent: #00a8ff;
+            --accent: #0084cc;
             --text-main: #2d3436;
+            --text-muted: #555555;
+            /* Fixed for Contrast */
             --bg-light: #f4f7f6;
             --white: #ffffff;
         }
@@ -50,7 +51,6 @@
             overflow-x: hidden;
         }
 
-        /* Navigation */
         .navbar-default {
             background: rgba(255, 255, 255, 0.95);
             border: none;
@@ -79,10 +79,9 @@
             color: var(--accent) !important;
         }
 
-        /* Hero Section */
         .welcome-hero {
             background: linear-gradient(rgba(2, 7, 26, 0.88), rgba(2, 7, 26, 0.88)),
-            url('assets/images/about/welcome-banner.jpg');
+            url('assets/images/about/welcome-banner.webp');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -94,17 +93,18 @@
             text-transform: uppercase;
         }
 
-        .header-text h2 {
+        .header-text h1 {
             font-size: 55px;
             font-weight: 700;
             letter-spacing: 4px;
             margin-bottom: 10px;
         }
 
+        /* Changed h2 to h1 for SEO/A11y */
         .header-text p {
             font-size: 20px;
             margin: 20px 0 40px;
-            opacity: 0.8;
+            opacity: 0.9;
             letter-spacing: 2px;
         }
 
@@ -112,7 +112,7 @@
             display: inline-block;
             padding: 15px 40px;
             background: var(--accent);
-            color: var(--white);
+            color: #02071a;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
@@ -127,7 +127,6 @@
             box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
         }
 
-        /* Section Styling */
         section {
             padding: 100px 0;
         }
@@ -152,7 +151,6 @@
             border-radius: 2px;
         }
 
-        /* Skills with Percentage */
         .barWrapper {
             margin-bottom: 30px;
         }
@@ -190,7 +188,6 @@
             transition: 2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
         }
 
-        /* Achievements Styling */
         .achievement-item {
             position: relative;
             overflow: hidden;
@@ -203,7 +200,8 @@
         .achievement-item img {
             width: 100%;
             height: 250px;
-            object-fit: fill;
+            object-fit: cover;
+            object-position: center;
             transition: 0.5s;
         }
 
@@ -215,7 +213,6 @@
             transform: translateY(-10px);
         }
 
-        /* Card Box */
         .card-box {
             padding: 40px;
             background: var(--white);
@@ -237,7 +234,6 @@
             font-size: 16px;
         }
 
-        /* Certifications */
         .cert-card {
             text-align: center;
             padding: 30px;
@@ -268,7 +264,8 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"
+                    aria-label="Toggle Navigation">
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">SACHIN THOKAL</a>
@@ -286,296 +283,334 @@
         </div>
     </nav>
 
-    <section id="welcome-hero" class="welcome-hero">
-        <div class="container text-center">
-            <div class="header-text" data-aos="zoom-in" data-aos-duration="1500">
-                <h2>Sachin Sudhakar Thokal</h2>
-                <p>A passionate DevOps Engineer focused on automation and continuous integration</p>
-                <a href="assets/download/Sachin_Thokal_Resume_V3.pdf" download><i class="fa fa-download"></i> DOWNLOAD
-                    RESUME</a>
-            </div>
-        </div>
-    </section>
+    <main id="main-content">
 
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="section-heading">
-                        <h2>Professional Bio</h2>
-                    </div>
-                    <p style="font-size: 17px; color: #555;">Experienced Devops Production Engineer with 4.9+ years of expertise in infrastructure automation, kubernetes orchestration, and multitasking support systems. Passionate about optimizing workflows and driving team productivity. I’m passionate about bridging the gap between development and operations, ensuring faster and more reliable software delivery. I thrive in challenging environments where innovation, collaboration, and problem-solving are key to success.</p>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-6"><strong>Current Role:</strong>
-                            <p>DevOps Production Support Engineer</p>
-                        </div>
-                        <div class="col-sm-6"><strong>Company:</strong>
-                            <p>Tech Mahindra Ltd</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 col-md-offset-1" data-aos="fade-left">
-                    <img src="assets/images/about/profile_image.jpg" class="img-responsive"
-                        style="border-radius: 80px 20px 80px 20px; border: 6px solid #ffffff; box-shadow: 0 15px 30px rgba(0,0,0,0.12); transition: 0.4s;"
-                        onmouseover="this.style.borderRadius='20px 80px 20px 80px'"
-                        onmouseout="this.style.borderRadius='80px 20px 80px 20px'" alt="Sachin Thokal">
+        <section id="welcome-hero" class="welcome-hero">
+            <div class="container text-center">
+                <div class="header-text" data-aos="zoom-in" data-aos-duration="1500">
+                    <h1>Sachin Sudhakar Thokal</h1>
+                    <p>A passionate DevOps Engineer focused on automation and continuous integration</p>
+                    <a href="assets/download/Sachin_Thokal_Resume_V3.pdf" download aria-label="Download Sachin's Resume">
+                        <i class="fa fa-download" aria-hidden="true"></i> DOWNLOAD RESUME
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" style="background:var(--bg-light)">
-        <div class="container">
-            <div class="section-heading" data-aos="fade-up">
-                <h2>Technical Expertise</h2>
-            </div>
-            <div class="row">
-                
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="barWrapper">
-                        <div class="skill-info">
-                            <span class="progressText">Azure DevOps</span>
-                            <span class="percentText">80%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:80%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="barWrapper">
-                        <div class="skill-info">
-                            <span class="progressText">Kubernetes, Docker</span>
-                            <span class="percentText">85%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:85%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="barWrapper">
-                        <div class="skill-info">
-                            <span class="progressText">Git, GitHub</span>
-                            <span class="percentText">95%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:95%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="barWrapper">
-                        <div class="skill-info">
-                            <span class="progressText">Linux/Unix</span>
-                            <span class="percentText">90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:90%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="barWrapper">
-                        <div class="skill-info">
-                            <span class="progressText">CI/CD Pipeline</span>
-                            <span class="percentText">90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:90%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="barWrapper">
-                        <div class="skill-info">
-                            <span class="progressText">Prometheus, Grafana, ELK Stack, Splunk</span>
-                            <span class="percentText">85%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:85%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="barWrapper">
-                        <div class="skill-info">
-                            <span class="progressText">Incident Management and Troubleshooting</span>
-                            <span class="percentText">90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:90%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="barWrapper">
-                        <div class="skill-info">
-                            <span class="progressText">Collaboration and Communication Skills</span>
-                            <span class="percentText">90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:90%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <div class="section-heading" data-aos="fade-up">
-                <h2>Work History</h2>
-            </div>
-            
-            <div class="card-box" data-aos="fade-up">
+        <section id="about">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-2">
-                        <div class="card-date">March 2021 - Present</div>
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="section-heading">
+                            <h2>Professional Bio</h2>
+                        </div>
+                        <p style="font-size: 17px; color: var(--text-muted);">Experienced Devops Production Engineer with 4.9+ years of expertise in infrastructure automation, kubernetes orchestration, and multitasking support systems. Passionate about optimizing workflows and driving team productivity. I’m passionate about bridging the gap between development and operations, ensuring faster and more reliable software delivery. I thrive in challenging environments where innovation, collaboration, and problem-solving are key to success.</p>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-6"><strong>Current Role:</strong>
+                                <p>DevOps Production Support Engineer</p>
+                            </div>
+                            <div class="col-sm-6"><strong>Company:</strong>
+                                <p>Tech Mahindra Ltd</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-10">
-                        <h4 style="font-weight:700; color: var(--primary);">DevOps Production Support Engineer</h4>
-                        <p style="color: var(--accent); font-weight: 600;">Tech Mahindra Ltd</p>
-                        <p>I am a member of DevOps Production Support team. Responsible for daily maintenance/Deployment of the application servers including nightly/weekly bounce, Monitoring and configuration management.</p>
+                    <div class="col-md-5 col-md-offset-1" data-aos="fade-left">
+                        <img src="assets/images/about/profile_image.webp" class="img-responsive"
+                            width="500" height="500"
+                            style="border-radius: 80px 20px 80px 20px; border: 6px solid #ffffff; box-shadow: 0 15px 30px rgba(0,0,0,0.12); transition: 0.4s;"
+                            onmouseover="this.style.borderRadius='20px 80px 20px 80px'"
+                            onmouseout="this.style.borderRadius='80px 20px 80px 20px'"
+                            alt="Sachin Thokal Professional Photo" loading="lazy">
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </section>
+        </section>
 
-    <section id="achievements" style="background: var(--white);">
-        <div class="container">
-            <div class="section-heading" data-aos="fade-up">
-                <h2>Key Achievements</h2>
+        <section id="skills" style="background:var(--bg-light)">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2>Technical Expertise</h2>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="barWrapper">
+                            <div class="skill-info">
+                                <span class="progressText">Azure DevOps</span>
+                                <span class="percentText">80%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width:80%"
+                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                    aria-label="Azure DevOps Proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="barWrapper">
+                            <div class="skill-info">
+                                <span class="progressText">Kubernetes, Docker</span>
+                                <span class="percentText">85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width:85%"
+                                    aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                                    aria-label="Kubernetes, Docker Proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="barWrapper">
+                            <div class="skill-info">
+                                <span class="progressText">Git, GitHub</span>
+                                <span class="percentText">95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width:95%"
+                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
+                                    aria-label="Git, GitHub Proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="barWrapper">
+                            <div class="skill-info">
+                                <span class="progressText">Linux/Unix</span>
+                                <span class="percentText">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width:90%"
+                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                                    aria-label="Linux/Unix Proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="barWrapper">
+                            <div class="skill-info">
+                                <span class="progressText">CI/CD Pipeline</span>
+                                <span class="percentText">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width:90%"
+                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                                    aria-label="CI/CD Pipeline Proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="barWrapper">
+                            <div class="skill-info">
+                                <span class="progressText">Prometheus, Grafana, ELK Stack, Splunk</span>
+                                <span class="percentText">85%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width:85%"
+                                    aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                                    aria-label="Prometheus, Grafana, ELK Stack, Splunk Proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="barWrapper">
+                            <div class="skill-info">
+                                <span class="progressText">Incident Management and Troubleshooting</span>
+                                <span class="percentText">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width:90%"
+                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                                    aria-label="Incident Management and Troubleshooting Proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="barWrapper">
+                            <div class="skill-info">
+                                <span class="progressText">Collaboration and Communication Skills</span>
+                                <span class="percentText">90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width:90%"
+                                    aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                                    aria-label="Collaboration and Communication Skills Proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="row">
-                
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="achievement-item">
-                        <img src="assets/images/portfolio/P1.jpg" class="img-responsive" alt="Achievement">
-                    </div>
-                </div>
-                
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="achievement-item">
-                        <img src="assets/images/portfolio/P2.jpg" class="img-responsive" alt="Achievement">
-                    </div>
-                </div>
-                
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="achievement-item">
-                        <img src="assets/images/portfolio/P3.jpg" class="img-responsive" alt="Achievement">
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="profiles" style="background:var(--bg-light)">
-        <div class="container">
-            <div class="section-heading" data-aos="fade-up">
-                <h2>Certifications</h2>
-            </div>
-            <div class="row">
-                
-                <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
-                    <div class="cert-card">
-                        <img src="https://img.icons8.com/fluency/48/azure-1.png" width="60" alt="cert-icon">
-                        <h5 style="font-weight:700">Microsoft : AZ-104</h5>
-                        <p style="color: #888; font-size: 12px;">Microsoft Azure Administrator</p>
-                    </div>
+        <section id="experience">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2>Work History</h2>
                 </div>
                 
-                <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
-                    <div class="cert-card">
-                        <img src="https://img.icons8.com/fluency/48/cloud.png" width="60" alt="cert-icon">
-                        <h5 style="font-weight:700">Cloud Certification</h5>
-                        <p style="color: #888; font-size: 12px;">Cloud Certification L1/L2</p>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
-                    <div class="cert-card">
-                        <img src="https://img.icons8.com/color/48/bard--v2.png" width="60" alt="cert-icon">
-                        <h5 style="font-weight:700">AI White/Blue Belt</h5>
-                        <p style="color: #888; font-size: 12px;">AI White/Blue Belt L1/L2</p>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
-                    <div class="cert-card">
-                        <img src="https://img.icons8.com/nolan/64/skyatlas.png" width="60" alt="cert-icon">
-                        <h5 style="font-weight:700">DevOps Certification</h5>
-                        <p style="color: #888; font-size: 12px;">DevOps Certification L1/L2</p>
+                <div class="card-box" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="card-date">March 2021 - Present</div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3 style="font-weight:700; color: var(--primary); font-size: 18px; margin-top: 0;">DevOps Production Support Engineer</h3>
+                            <p style="color: var(--accent); font-weight: 600;">Tech Mahindra Ltd</p>
+                            <p>I am a member of DevOps Production Support team. Responsible for daily maintenance/Deployment of the application servers including nightly/weekly bounce, Monitoring and configuration management.</p>
+                        </div>
                     </div>
                 </div>
                 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" style="background: var(--primary); padding: 100px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="section-heading">
-                        <h2 style="color: white;">Get In Touch</h2>
-                    </div>
-                    <div class="contact-info" style="color: #bdc3c7; font-size: 16px;">
-                        <p><i class="fa fa-phone"></i> +91 8804171399</p>
-                        <p><i class="fa fa-envelope"></i> sachinthokal1799@gmail.com</p>
-                        <p><i class="fa fa-map-marker"></i> Pune, Maharashtra</p>
-                    </div>
+        <section id="achievements" style="background: var(--white);">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2>Key Achievements</h2>
                 </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <div
-                        style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
-                        <h4 style="color: white; margin-bottom:30px; font-weight: 600;">Wanna collaborate on a project?
-                        </h4>
+                <div class="row">
+                    
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="achievement-item">
+                            <img src="assets/images/portfolio/P1.webp" class="img-responsive" loading="lazy"
+                                alt="Achievement Screenshot" width="400" height="250">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="achievement-item">
+                            <img src="assets/images/portfolio/P2.webp" class="img-responsive" loading="lazy"
+                                alt="Achievement Screenshot" width="400" height="250">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="achievement-item">
+                            <img src="assets/images/portfolio/P3.webp" class="img-responsive" loading="lazy"
+                                alt="Achievement Screenshot" width="400" height="250">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
 
-                        <button class="btn btn-block"
-                            style="background: #25d366; color: white; font-weight: 700; padding: 15px; border-radius: 50px; letter-spacing: 1px; border: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);"
-                            onmouseover="this.style.opacity='0.9'; this.style.transform='scale(1.02)';"
-                            onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';"
-                            onclick="const phone = '+91 8804171399'.replace(/\D/g, ''); window.open('https://wa.me/' + phone + '?text=Hi Sachin, I saw your portfolio and would like to discuss a project!', '_blank')">
-                            <i class="fa fa-whatsapp" style="margin-right: 8px; font-size: 18px;"></i> CHAT ON WHATSAPP
-                        </button>
+        <section id="profiles" style="background:var(--bg-light)">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2>Certifications</h2>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
+                        <div class="cert-card">
+                            <img src="https://img.icons8.com/fluency/48/azure-1.png" width="60" height="60" alt="Microsoft : AZ-104 logo">
+                            <h3 style="font-weight:700; font-size: 16px;">Microsoft : AZ-104</h3>
+                            <p style="color: var(--text-muted); font-size: 12px;">Microsoft Azure Administrator</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
+                        <div class="cert-card">
+                            <img src="https://img.icons8.com/fluency/48/cloud.png" width="60" height="60" alt="Cloud Certification logo">
+                            <h3 style="font-weight:700; font-size: 16px;">Cloud Certification</h3>
+                            <p style="color: var(--text-muted); font-size: 12px;">Cloud Certification L1/L2</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
+                        <div class="cert-card">
+                            <img src="https://img.icons8.com/color/48/bard--v2.png" width="60" height="60" alt="AI White/Blue Belt logo">
+                            <h3 style="font-weight:700; font-size: 16px;">AI White/Blue Belt</h3>
+                            <p style="color: var(--text-muted); font-size: 12px;">AI White/Blue Belt L1/L2</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
+                        <div class="cert-card">
+                            <img src="https://img.icons8.com/nolan/64/skyatlas.png" width="60" height="60" alt="DevOps Certification logo">
+                            <h3 style="font-weight:700; font-size: 16px;">DevOps Certification</h3>
+                            <p style="color: var(--text-muted); font-size: 12px;">DevOps Certification L1/L2</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="background: var(--primary); padding: 100px 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="section-heading">
+                            <h2 style="color: white;">Get In Touch</h2>
+                        </div>
+                        <div class="contact-info" style="color: #bdc3c7; font-size: 16px;">
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> +91 8804171399</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i> sachinthokal1799@gmail.com</p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> Pune, Maharashtra</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <div
+                            style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                            <h3 style="color: white; margin-bottom:30px; font-weight: 600; font-size: 20px;">Wanna
+                                collaborate on a project?</h3>
+                            <button class="btn btn-block"
+                                style="background: #25d366; color: white; font-weight: 700; padding: 15px; border-radius: 50px; letter-spacing: 1px; border: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);"
+                                onmouseover="this.style.opacity='0.9'; this.style.transform='scale(1.02)';"
+                                onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';"
+                                onclick="const phone = '+91 8804171399'.replace(/\D/g, ''); window.open('https://wa.me/' + phone + '?text=Hi Sachin, I saw your portfolio and would like to discuss a project!', '_blank')">
+                                <i class="fa fa-whatsapp" style="margin-right: 8px; font-size: 18px;"
+                                    aria-hidden="true"></i> CHAT ON WHATSAPP
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="text-center" style="padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05);">
         <p style="color: rgba(255,255,255,0.6); font-size: 14px; letter-spacing: 1px; margin: 0;">
             Code. Deploy. Automate. Repeat |
-            <i class="fa fa-copyright"></i><span style="color: white; border-bottom: 1px solid var(--accent);"> Sachin
-                Thokal</span><i class="fa fa-heart" aria-hidden="true"
-                style="color: #ff0000; font-size: 14px; margin: 0 4px;"></i>
+            <i class="fa fa-copyright" aria-hidden="true"></i> <span
+                style="color: white; border-bottom: 1px solid var(--accent);">Sachin Thokal</span>
+            <i class="fa fa-heart" aria-hidden="true" style="color: #ff0000; font-size: 14px; margin: 0 4px;"></i>
         </p>
     </footer>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
+        // Isse ye ensure hoga ki library load hone ke baad hi function chale
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 1000,
+                    once: true,
+                    offset: 100
+                });
+            }
         });
     </script>
 </body>
