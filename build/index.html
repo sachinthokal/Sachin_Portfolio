@@ -1,717 +1,574 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
-	<!-- meta data -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sachin Thokal | Portfolio</title>
 
-	<!--font-family-->
-	<link
-		href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext"
-		rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
 
-	<!-- title of site -->
-	<title>sachin-thokal-portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
 
-	<!-- For favicon png -->
-	<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png" />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
 
-	<!--font-awesome.min.css-->
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
 
-	<!--flat icon css-->
-	<link rel="stylesheet" href="assets/css/flaticon.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-	<!--animate.css-->
-	<link rel="stylesheet" href="assets/css/animate.css">
+    <style>
+        /* --- Professional Color Palette --- */
+        :root {
+            --primary: #02071a;
+            --accent: #00a8ff;
+            --text-main: #2d3436;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+        }
 
-	<!--owl.carousel.css-->
-	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        html {
+            scroll-behavior: smooth;
+        }
 
-	<!--bootstrap.min.css-->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-	<!-- bootsnav -->
-	<link rel="stylesheet" href="assets/css/bootsnav.css">
+        /* Navigation */
+        .navbar-default {
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+        }
 
-	<!--style.css-->
-	<link rel="stylesheet" href="assets/css/style.css">
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--primary) !important;
+            letter-spacing: 1px;
+        }
 
-	<!--responsive.css-->
-	<link rel="stylesheet" href="assets/css/responsive.css">		
-	
+        .nav li a {
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--text-main) !important;
+            transition: 0.3s;
+        }
+
+        .nav li a:hover,
+        .nav li.active a {
+            color: var(--accent) !important;
+        }
+
+        /* Hero Section */
+        .welcome-hero {
+            background: linear-gradient(rgba(2, 7, 26, 0.88), rgba(2, 7, 26, 0.88)),
+            url('assets/images/about/welcome-banner.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+
+        .header-text h2 {
+            font-size: 55px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+
+        .header-text p {
+            font-size: 20px;
+            margin: 20px 0 40px;
+            opacity: 0.8;
+            letter-spacing: 2px;
+        }
+
+        .header-text a {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.5s;
+            box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
+        }
+
+        .header-text a:hover {
+            background: var(--white);
+            color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-heading h2 {
+            font-size: 32px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-heading h2:after {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Skills with Percentage */
+        .barWrapper {
+            margin-bottom: 30px;
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .progressText {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .percentText {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary);
+        }
+
+        .progress {
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 10px;
+            box-shadow: none;
+            overflow: visible;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            border-radius: 10px;
+            height: 100%;
+            transition: 2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+
+        /* Achievements Styling */
+        .achievement-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: 0.5s;
+        }
+
+        .achievement-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: fill;
+            transition: 0.5s;
+        }
+
+        .achievement-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Card Box */
+        .card-box {
+            padding: 40px;
+            background: var(--white);
+            border-radius: 12px;
+            border-left: 6px solid var(--primary);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: 0.4s;
+        }
+
+        .card-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-date {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* Certifications */
+        .cert-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            margin-bottom: 25px;
+            transition: 0.4s;
+            border: 1px solid transparent;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .cert-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+        }
+
+        footer {
+            background: #01040f;
+            color: #8492a6;
+            padding: 40px 0;
+            font-size: 14px;
+        }
+    </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
 
-	<!-- top-area Start -->
-	<header class="top-area">
-		<div class="header-area">
-			<!-- Start Navigation -->
-			<nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">SACHIN THOKAL</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#profiles">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-				<div class="container">
+    <section id="welcome-hero" class="welcome-hero">
+        <div class="container text-center">
+            <div class="header-text" data-aos="zoom-in" data-aos-duration="1500">
+                <h2>Sachin Sudhakar Thokal</h2>
+                <p>A passionate DevOps Engineer focused on automation and continuous integration</p>
+                <a href="assets/download/Sachin_Thokal_Resume_V3.pdf" download><i class="fa fa-download"></i> DOWNLOAD
+                    RESUME</a>
+            </div>
+        </div>
+    </section>
 
-					<!-- Start Header Navigation -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-							<i class="fa fa-bars"></i>
-						</button>
-						<a class="navbar-brand" href="index.html">Sachin Thokal</a>
-					</div><!--/.navbar-header-->
-					<!-- End Header Navigation -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="section-heading">
+                        <h2>Professional Bio</h2>
+                    </div>
+                    <p style="font-size: 17px; color: #555;">Experienced Devops Production Engineer with 4.9+ years of expertise in infrastructure automation, kubernetes orchestration, and multitasking support systems. Passionate about optimizing workflows and driving team productivity. I’m passionate about bridging the gap between development and operations, ensuring faster and more reliable software delivery. I thrive in challenging environments where innovation, collaboration, and problem-solving are key to success.</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6"><strong>Current Role:</strong>
+                            <p>DevOps Production Support Engineer</p>
+                        </div>
+                        <div class="col-sm-6"><strong>Company:</strong>
+                            <p>Tech Mahindra Ltd</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1" data-aos="fade-left">
+                    <img src="assets/images/about/profile_image.jpg" class="img-responsive"
+                        style="border-radius: 80px 20px 80px 20px; border: 6px solid #ffffff; box-shadow: 0 15px 30px rgba(0,0,0,0.12); transition: 0.4s;"
+                        onmouseover="this.style.borderRadius='20px 80px 20px 80px'"
+                        onmouseout="this.style.borderRadius='80px 20px 80px 20px'" alt="Sachin Thokal">
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-						<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-							<li class=" smooth-menu active"></li>
-							<li class=" smooth-menu"><a href="#education">education</a></li>
-							<li class="smooth-menu"><a href="#skills">skills</a></li>
-							<li class="smooth-menu"><a href="#experience">experience</a></li>
-							<li class="smooth-menu"><a href="#profiles">CERTIFICATE</a></li>
-							<li class="smooth-menu"><a href="#portfolio">Achievements</a></li>
-							<li class="smooth-menu"><a href="#contact">contact</a></li>
-						</ul><!--/.nav -->
-					</div><!-- /.navbar-collapse -->
-				</div><!--/.container-->
-			</nav><!--/nav-->
-			<!-- End Navigation -->
-		</div><!--/.header-area-->
+    <section id="skills" style="background:var(--bg-light)">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up">
+                <h2>Technical Expertise</h2>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="barWrapper">
+                        <div class="skill-info">
+                            <span class="progressText">Azure DevOps</span>
+                            <span class="percentText">80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width:80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="barWrapper">
+                        <div class="skill-info">
+                            <span class="progressText">Kubernetes, Docker</span>
+                            <span class="percentText">85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width:85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="barWrapper">
+                        <div class="skill-info">
+                            <span class="progressText">Git, GitHub</span>
+                            <span class="percentText">95%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width:95%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="barWrapper">
+                        <div class="skill-info">
+                            <span class="progressText">Linux/Unix</span>
+                            <span class="percentText">90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width:90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="barWrapper">
+                        <div class="skill-info">
+                            <span class="progressText">CI/CD Pipeline</span>
+                            <span class="percentText">90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width:90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="barWrapper">
+                        <div class="skill-info">
+                            <span class="progressText">Prometheus, Grafana, ELK Stack, Splunk</span>
+                            <span class="percentText">85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width:85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="barWrapper">
+                        <div class="skill-info">
+                            <span class="progressText">Incident Management and Troubleshooting</span>
+                            <span class="percentText">90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width:90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="barWrapper">
+                        <div class="skill-info">
+                            <span class="progressText">Collaboration and Communication Skills</span>
+                            <span class="percentText">90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width:90%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-		<div class="clearfix"></div>
+    <section id="experience">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up">
+                <h2>Work History</h2>
+            </div>
+            
+            <div class="card-box" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="card-date">March 2021 - Present</div>
+                    </div>
+                    <div class="col-md-10">
+                        <h4 style="font-weight:700; color: var(--primary);">DevOps Production Support Engineer</h4>
+                        <p style="color: var(--accent); font-weight: 600;">Tech Mahindra Ltd</p>
+                        <p>I am a member of DevOps Production Support team. Responsible for daily maintenance/Deployment of the application servers including nightly/weekly bounce, Monitoring and configuration management.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
 
-	</header><!-- /.top-area-->
-	<!-- top-area End -->
+    <section id="achievements" style="background: var(--white);">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up">
+                <h2>Key Achievements</h2>
+            </div>
+            <div class="row">
+                
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="achievement-item">
+                        <img src="assets/images/portfolio/P1.jpg" class="img-responsive" alt="Achievement">
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="achievement-item">
+                        <img src="assets/images/portfolio/P2.jpg" class="img-responsive" alt="Achievement">
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="achievement-item">
+                        <img src="assets/images/portfolio/P3.jpg" class="img-responsive" alt="Achievement">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-	<!--welcome-hero start -->
-	<section id="welcome-hero" class="welcome-hero">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
+    <section id="profiles" style="background:var(--bg-light)">
+        <div class="container">
+            <div class="section-heading" data-aos="fade-up">
+                <h2>Certifications</h2>
+            </div>
+            <div class="row">
+                
+                <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
+                    <div class="cert-card">
+                        <img src="https://img.icons8.com/fluency/48/azure-1.png" width="60" alt="cert-icon">
+                        <h5 style="font-weight:700">Microsoft : AZ-104</h5>
+                        <p style="color: #888; font-size: 12px;">Microsoft Azure Administrator</p>
+                    </div>
+                </div>
+                
+                <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
+                    <div class="cert-card">
+                        <img src="https://img.icons8.com/fluency/48/cloud.png" width="60" alt="cert-icon">
+                        <h5 style="font-weight:700">Cloud Certification</h5>
+                        <p style="color: #888; font-size: 12px;">Cloud Certification L1/L2</p>
+                    </div>
+                </div>
+                
+                <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
+                    <div class="cert-card">
+                        <img src="https://img.icons8.com/color/48/bard--v2.png" width="60" alt="cert-icon">
+                        <h5 style="font-weight:700">AI White/Blue Belt</h5>
+                        <p style="color: #888; font-size: 12px;">AI White/Blue Belt L1/L2</p>
+                    </div>
+                </div>
+                
+                <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
+                    <div class="cert-card">
+                        <img src="https://img.icons8.com/nolan/64/skyatlas.png" width="60" alt="cert-icon">
+                        <h5 style="font-weight:700">DevOps Certification</h5>
+                        <p style="color: #888; font-size: 12px;">DevOps Certification L1/L2</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-					<div class="header-text">
-						<h2>Sachin Sudhakar Thokal</h2>
-						<p>A passionate DevOps Engineer focused on automation and continuous integration</p>
-						<a href="assets/download/Sachin_Thokal_Resume_V3.pdf" download>download resume</a>
-					</div><!--/.header-text-->
-				</div><!--/.col-->
-			</div><!-- /.row-->
-		</div><!-- /.container-->
+    <section id="contact" style="background: var(--primary); padding: 100px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="section-heading">
+                        <h2 style="color: white;">Get In Touch</h2>
+                    </div>
+                    <div class="contact-info" style="color: #bdc3c7; font-size: 16px;">
+                        <p><i class="fa fa-phone"></i> +91 8804171399</p>
+                        <p><i class="fa fa-envelope"></i> sachinthokal1799@gmail.com</p>
+                        <p><i class="fa fa-map-marker"></i> Pune, Maharashtra</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div
+                        style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                        <h4 style="color: white; margin-bottom:30px; font-weight: 600;">Wanna collaborate on a project?
+                        </h4>
 
-	</section><!--/.welcome-hero-->
-	<!--welcome-hero end -->
+                        <button class="btn btn-block"
+                            style="background: #25d366; color: white; font-weight: 700; padding: 15px; border-radius: 50px; letter-spacing: 1px; border: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);"
+                            onmouseover="this.style.opacity='0.9'; this.style.transform='scale(1.02)';"
+                            onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';"
+                            onclick="const phone = '+91 8804171399'.replace(/\D/g, ''); window.open('https://wa.me/' + phone + '?text=Hi Sachin, I saw your portfolio and would like to discuss a project!', '_blank')">
+                            <i class="fa fa-whatsapp" style="margin-right: 8px; font-size: 18px;"></i> CHAT ON WHATSAPP
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!--about start -->
-	<section id="about" class="about">
-		<div class="section-heading text-center">
-			<h2>about me</h2>
-		</div>
-		<div class="container">
-			<div class="about-content">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="single-about-txt">
-							<h1 style="color: black; font-size: x-large;">Sachin Sudhakar Thokal</h1>
-							<p style="color: black;">
-								DevOps Production Support Engineer <br>
-								Tech Mahindra Ltd
-							</p>
-							<p>
-								Experienced DevOps Production Engineer with 4.9+ years of expertise in infrastructure
-								automation, Kubernetes orchestration, and multitasking support systems. Passionate about
-								optimizing workflows and driving team productivity.
-
-								I’m passionate about bridging the gap between development and operations, ensuring
-								faster and more reliable software delivery. I thrive in challenging environments where
-								innovation, collaboration, and problem-solving are key to success.
-							</p>
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="single-about-add-info">
-										<h3>phone</h3>
-										<p>+91 8804171399</p>
-									</div>
-								</div>
-								<div class="col-sm-2">
-									<div class="single-about-add-info">
-
-									</div>
-								</div>
-								<div class="col-sm-2">
-									<div class="single-about-add-info">
-										<h3>email</h3>
-										<p>sachinthokal1799@gmail.com</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-offset-1 col-sm-5">
-						<div class="single-about-img">
-							<img src="assets/images/about/profile_image.jpg" alt="profile_image">
-							<div class="about-list-icon">
-								<ul>
-									<li>
-										<a href="#">
-											<i class="fa fa-facebook" aria-hidden="true"></i>
-										</a>
-									</li><!-- / li -->
-									<li>
-										<a href="#">
-											<i class="fa fa-dribbble" aria-hidden="true"></i>
-										</a>
-
-									</li><!-- / li -->
-									<li>
-										<a href="#">
-											<i class="fa fa-twitter" aria-hidden="true"></i>
-										</a>
-
-									</li><!-- / li -->
-									<li>
-										<a href="#">
-											<i class="fa fa-linkedin" aria-hidden="true"></i>
-										</a>
-									</li><!-- / li -->
-									<li>
-										<a href="#">
-											<i class="fa fa-instagram" aria-hidden="true"></i>
-										</a>
-									</li><!-- / li -->
-
-
-								</ul><!-- / ul -->
-							</div><!-- /.about-list-icon -->
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</section><!--/.about-->
-	<!--about end -->
-
-	<!--education start -->
-	<section id="education" class="education">
-		<div class="section-heading text-center">
-			<h2>education</h2>
-		</div>
-		<div class="container">
-			<div class="education-horizontal-timeline">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="single-horizontal-timeline">
-							<div class="experience-time">
-								<h2>2017 - 2020</h2>
-								<h3>bachelor <span>of </span> computer science</h3>
-							</div><!--/.experience-time-->
-							<div class="timeline-horizontal-border">
-								<i class="fa fa-circle" aria-hidden="true"></i>
-								<span class="single-timeline-horizontal"></span>
-							</div>
-							<div class="timeline">
-								<div class="timeline-content">
-									<h4 class="title">
-										New Art's Commers And Science College Ahmednagar
-									</h4>
-									<h5>Ahmednagar, Maharashtra - 414005</h5>
-									<p class="description">
-										70.25 % ( FIRST CLASS WITH DISTINCTION )
-									</p>
-								</div><!--/.timeline-content-->
-							</div><!--/.timeline-->
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="single-horizontal-timeline">
-							<div class="experience-time">
-								<h2>2016 - 2017</h2>
-								<h3>HSC</h3>
-							</div><!--/.experience-time-->
-							<div class="timeline-horizontal-border">
-								<i class="fa fa-circle" aria-hidden="true"></i>
-								<span class="single-timeline-horizontal"></span>
-							</div>
-							<div class="timeline">
-								<div class="timeline-content">
-									<h4 class="title">
-										New English School & Junior College Supa Ahmednagar
-									</h4>
-									<h5>Supa, Ahmednagar - 414301</h5>
-									<p class="description">
-										60.00 % ( FIRST CLASS WITH DISTINCTION )
-									</p>
-								</div><!--/.timeline-content-->
-							</div><!--/.timeline-->
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="single-horizontal-timeline">
-							<div class="experience-time">
-								<h2>2014 - 2015</h2>
-								<h3>SSC </h3>
-							</div><!--/.experience-time-->
-							<div class="timeline-horizontal-border">
-								<i class="fa fa-circle" aria-hidden="true"></i>
-								<span class="single-timeline-horizontal spacial-horizontal-line
-									"></span>
-							</div>
-							<div class="timeline">
-								<div class="timeline-content">
-									<h4 class="title">
-										Kamargaon New English School Kamargaon Ahmednagar
-									</h4>
-									<h5>Kamargaon, Ahmednagar - 414005</h5>
-									<p class="description">
-										78.20 % ( FIRST CLASS WITH DISTINCTION )
-									</p>
-								</div><!--/.timeline-content-->
-							</div><!--/.timeline-->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</section><!--/.education-->
-	<!--education end -->
-
-	<!--skills start -->
-	<section id="skills" class="skills">
-		<div class="skill-content">
-			<div class="section-heading text-center">
-				<h2>skills</h2>
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="single-skill-content">
-							<div class="barWrapper">
-								<span class="progressText">Azure DevOps</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90"
-											aria-valuemin="10" aria-valuemax="100">
-
-										</div>
-									</div>
-									<h3>80%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Kubernetes, Docker </span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="85"
-											aria-valuemin="10" aria-valuemax="100">
-
-										</div>
-									</div>
-									<h3>90%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Git, GitHub</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="97"
-											aria-valuemin="10" aria-valuemax="100">
-
-										</div>
-									</div>
-									<h3>95%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Linux/Unix</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90"
-											aria-valuemin="10" aria-valuemax="100">
-
-										</div>
-									</div>
-									<h3>95%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="single-skill-content">
-							<div class="barWrapper">
-								<span class="progressText">CI/CD Pipeline</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90"
-											aria-valuemin="10" aria-valuemax="100">
-
-										</div>
-									</div>
-									<h3>80%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Prometheus, Grafana, ELK Stack, Splunk</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="85"
-											aria-valuemin="10" aria-valuemax="100">
-
-										</div>
-									</div>
-									<h3>97%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Incident Management and Troubleshooting</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="97"
-											aria-valuemin="10" aria-valuemax="100">
-
-										</div>
-									</div>
-									<h3>95%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText"> Collaboration and Communication Skills</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90"
-											aria-valuemin="10" aria-valuemax="100">
-
-										</div>
-									</div>
-									<h3>95%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-						</div>
-					</div>
-				</div><!-- /.row -->
-			</div> <!-- /.container -->
-		</div><!-- /.skill-content-->
-
-	</section><!--/.skills-->
-	<!--skills end -->
-
-	<!--experience start -->
-	<section id="experience" class="experience">
-		<div class="section-heading text-center">
-			<h2>experience</h2>
-		</div>
-		<div class="container">
-			<div class="experience-content">
-				<div class="main-timeline">
-					<ul>
-						<li>
-							<div class="single-timeline-box fix">
-								<div class="row">
-									<div class="col-md-5">
-										<div class="experience-time text-right">
-											<h2>March 2021 - Present</h2>
-											<h3>DevOps Production Support Engineer</h3>
-										</div><!--/.experience-time-->
-									</div><!--/.col-->
-									<div class="col-md-offset-1 col-md-5">
-										<div class="timeline">
-											<div class="timeline-content">
-												<h4 class="title">
-													<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-													Tech Mahindra Ltd
-												</h4>
-												<h5>Pune, Maharashtra</h5>
-												<p class="description">
-													I am a member of DevOps Production Support team. Responsible for
-													daily maintenance/Deployment of the application servers including
-													nightly/weekly bounce, Monitoring and configuration management.
-												</p>
-											</div><!--/.timeline-content-->
-										</div><!--/.timeline-->
-									</div><!--/.col-->
-								</div>
-							</div><!--/.single-timeline-box-->
-						</li>
-					</ul>
-				</div><!--.main-timeline-->
-			</div><!--.experience-content-->
-		</div>
-
-	</section><!--/.experience-->
-	<!--experience end -->
-
-	<!--profiles start -->
-	<section id="profiles" class="profiles">
-		<div class="profiles-details">
-			<div class="section-heading text-center">
-				<h2>PROFESSIONAL CERTIFICATE</h2>
-			</div>
-			<div class="container">
-				<div class="profiles-content">
-					<div class="row">
-						<div class="col-sm-3">
-							<div class="single-profile">
-								<div class="profile-txt">
-									<a href=""><img width="48" height="48"
-											src="https://img.icons8.com/fluency/48/azure-1.png" alt="azure-1" /></a>
-									<div class="profile-icon-name">Microsoft : AZ-104</div>
-								</div>
-								<div class="single-profile-overlay">
-									<div class="profile-txt">
-										<a href=""><img width="48" height="48"
-												src="https://img.icons8.com/fluency/48/azure-1.png" alt="azure-1" /></a>
-										<div class="profile-icon-name">Microsoft Azure Administrator</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="single-profile">
-								<div class="profile-txt">
-									<a href=""><img width="48" height="48"
-											src="https://img.icons8.com/fluency/48/cloud.png" alt="azure-1" /></a>
-									<div class="profile-icon-name"> Cloud Certification</div>
-								</div>
-								<div class="single-profile-overlay">
-									<div class="profile-txt">
-										<a href=""><img width="48" height="48"
-												src="https://img.icons8.com/fluency/48/cloud.png" alt="azure-1" /></a>
-										<div class="profile-icon-name"> Cloud Certification L1</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="single-profile">
-								<div class="profile-txt">
-									<a href=""><img width="48" height="48"
-											src="https://img.icons8.com/pieces/64/code.png" alt="azure-1" /></a>
-									<div class="profile-icon-name">Front-End Developer</div>
-								</div>
-								<div class="single-profile-overlay">
-									<div class="profile-txt">
-										<a href=""><img width="48" height="48"
-												src="https://img.icons8.com/pieces/64/code.png" alt="azure-1" /></a>
-										<div class="profile-icon-name">Front-End Developer Course</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="single-profile profile-no-border">
-								<div class="profile-txt">
-									<a href=""><img width="48" height="48"
-											src="https://img.icons8.com/nolan/64/github.png" alt="azure-1" /></a>
-									<div class="profile-icon-name">github</div>
-								</div>
-								<div class="single-profile-overlay">
-									<div class="profile-txt">
-										<a href=""><img width="48" height="48"
-												src="https://img.icons8.com/nolan/64/github.png" alt="azure-1" /></a>
-										<div class="profile-icon-name">github</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="profile-border"></div>
-
-	</section><!--/.profiles-->
-	<!--profiles end -->
-
-	<!--portfolio start -->
-	<section id="portfolio" class="portfolio">
-		<div class="portfolio-details">
-			<div class="section-heading text-center">
-				<h2>Professional Achievements</h2>
-			</div>
-			<div class="row">
-
-				<div class="col-sm-4">
-					<div class="item">
-						<img src="assets/images/portfolio/P1.jpg" style="height: 350px;border: 2px solid black;"
-							alt="portfolio image" />
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="item">
-						<img src="assets/images/portfolio/P2.jpg" style="height: 350px;border: 2px solid black;"
-							alt="portfolio image" />
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="item">
-						<img src="assets/images/portfolio/P3.jpg"
-							style="height: 350px; width: 450px;;border: 2px solid black;" alt="portfolio image" />
-					</div>
-				</div>
-			</div><!--/.portfolio-details-->
-
-	</section><!--/.portfolio-->
-	<!--portfolio end -->
-
-	<!--contact start -->
-	<section id="contact" class="contact">
-		<div class="section-heading text-center">
-			<h2>contact me</h2>
-		</div>
-		<div class="container">
-			<div class="contact-content">
-				<div class="row">
-					<div class="col-md-offset-1 col-md-5 col-sm-6">
-						<div class="single-contact-box">
-							<div class="contact-form">
-								<form>
-									<div class="row">
-										<div class="col-sm-6 col-xs-12">
-											<div class="form-group">
-												<input type="text" class="form-control" id="name" placeholder="Name*"
-													name="name">
-											</div><!--/.form-group-->
-										</div><!--/.col-->
-										<div class="col-sm-6 col-xs-12">
-											<div class="form-group">
-												<input type="email" class="form-control" id="email" placeholder="Email*"
-													name="email">
-											</div><!--/.form-group-->
-										</div><!--/.col-->
-									</div><!--/.row-->
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="form-group">
-												<input type="text" class="form-control" id="subject"
-													placeholder="Subject" name="subject">
-											</div><!--/.form-group-->
-										</div><!--/.col-->
-									</div><!--/.row-->
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="form-group">
-												<textarea class="form-control" rows="8" id="feedback"
-													placeholder="Message" name="message"></textarea>
-											</div><!--/.form-group-->
-										</div><!--/.col-->
-									</div><!--/.row-->
-									<div class="row">
-										<div class="col-sm-12">
-											<div class="single-contact-btn">
-												
-												<button onclick="raiseIssue()" style="color: black;" type="submit">Submit</button>
-											</form>
-
-											</div><!--/.single-single-contact-btn-->
-										</div><!--/.col-->
-									</div><!--/.row-->
-							</div><!--/.contact-form-->
-						</div><!--/.single-contact-box-->
-					</div><!--/.col-->
-					<div class="col-md-offset-1 col-md-5 col-sm-6">
-						<div class="single-contact-box">
-							<div class="contact-adress">
-								<div class="contact-add-head">
-									<h3>Sachin Thokal</h3>
-									<p>DevOps Production Support Engineer</p>
-								</div>
-								<div class="contact-add-info">
-									<div class="single-contact-add-info">
-										<h3>phone</h3>
-										<p>880-417-1399</p>
-									</div>
-									<div class="single-contact-add-info">
-										<h3>email</h3>
-										<p>sachinthokal1799@gmail.com</p>
-									</div>
-									<div class="single-contact-add-info">
-										<h3>GitHub</h3>
-										<p><a href="https://github.com/sachinthokal">github/sachinthokal</a></p>
-									</div>
-									<div class="single-contact-add-info">
-										<h3>LinkedIn</h3>
-										<p><a href="https://www.linkedin.com/in/sachinthokal/">linkedin/sachinthokal</a>
-										</p>
-									</div>
-								</div>
-							</div><!--/.contact-adress-->
-							<div class="hm-foot-icon">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li><!--/li-->
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li><!--/li-->
-									<li><a href="https://www.linkedin.com/in/sachinthokal/"><i
-												class="fa fa-linkedin"></i></a></li><!--/li-->
-									<li><a href="#"><i class="fa fa-instagram"></i></a></li><!--/li-->
-								</ul><!--/ul-->
-							</div><!--/.hm-foot-icon-->
-						</div><!--/.single-contact-box-->
-					</div><!--/.col-->
-				</div><!--/.row-->
-			</div><!--/.contact-content-->
-		</div><!--/.container-->
-
-	</section><!--/.contact-->
-	<!--contact end -->
-
-	<!--footer-copyright start-->
-	<footer id="footer-copyright" class="footer-copyright">
-		<div class="container">
-			<div class="hm-footer-copyright text-center">
-				<p>
-					&copy; copyright sachinthokal. - 2026
-				</p><!--/p-->
-			</div><!--/.text-center-->
-		</div><!--/.container-->
-
-		<div id="scroll-Top">
-			<div class="return-to-top">
-				<i class="fa fa-angle-up " id="scroll-top"></i>
-			</div>
-
-		</div><!--/.scroll-Top-->
-
-	</footer><!--/.footer-copyright-->
-	<!--footer-copyright end-->
-
-	<!-- Include all js compiled plugins (below), or include individual files as needed -->
-
-	<script src="assets/js/jquery.js"></script>
-
-	<!--modernizr.min.js-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-	<!--bootstrap.min.js-->
-	<script src="assets/js/bootstrap.min.js"></script>
-
-	<!-- bootsnav js -->
-	<script src="assets/js/bootsnav.js"></script>
-
-	<!-- jquery.sticky.js -->
-	<script src="assets/js/jquery.sticky.js"></script>
-
-	<!-- for progress bar start-->
-
-	<!-- progressbar js -->
-	<script src="assets/js/progressbar.js"></script>
-
-	<!-- appear js -->
-	<script src="assets/js/jquery.appear.js"></script>
-
-	<!-- for progress bar end -->
-
-	<!--owl.carousel.js-->
-	<script src="assets/js/owl.carousel.min.js"></script>
+    <footer class="text-center" style="padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <p style="color: rgba(255,255,255,0.6); font-size: 14px; letter-spacing: 1px; margin: 0;">
+            Code. Deploy. Automate. Repeat |
+            <i class="fa fa-copyright"></i><span style="color: white; border-bottom: 1px solid var(--accent);"> Sachin
+                Thokal</span><i class="fa fa-heart" aria-hidden="true"
+                style="color: #ff0000; font-size: 14px; margin: 0 4px;"></i>
+        </p>
+    </footer>
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-
-	<!--Custom JS-->
-	<script src="assets/js/custom.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
 </body>
 
 </html>
