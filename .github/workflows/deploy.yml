@@ -30,5 +30,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # freeze.py ने तयार केलेले फोल्डर
-          branch: gh-pages # या ब्रांचवर स्टॅटिक फाईल्स जातील
+          folder: build 
+          branch: gh-pages
