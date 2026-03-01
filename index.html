@@ -2,39 +2,40 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RK5C9YTBX4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-RK5C9YTBX4');
     </script>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Professional Portfolio of {{ data.profile.fullname }} - {{ data.profile.tagline }}">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>{{ data.profile.title }}</title>
 
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
-
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
-
     <link rel="manifest" href="assets/images/favicon/site.webmanifest">
-
     <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <style>
-        /* --- Professional Color Palette --- */
         :root {
             --primary: #02071a;
-            --accent: #00a8ff;
+            --accent: #0084cc;
             --text-main: #2d3436;
+            --text-muted: #555555;
+            /* Fixed for Contrast */
             --bg-light: #f4f7f6;
             --white: #ffffff;
         }
@@ -50,7 +51,6 @@
             overflow-x: hidden;
         }
 
-        /* Navigation */
         .navbar-default {
             background: rgba(255, 255, 255, 0.95);
             border: none;
@@ -79,7 +79,6 @@
             color: var(--accent) !important;
         }
 
-        /* Hero Section */
         .welcome-hero {
             background: linear-gradient(rgba(2, 7, 26, 0.88), rgba(2, 7, 26, 0.88)),
             url('assets/images/about/{{ data.profile.banner_image }}');
@@ -94,17 +93,18 @@
             text-transform: uppercase;
         }
 
-        .header-text h2 {
+        .header-text h1 {
             font-size: 55px;
             font-weight: 700;
             letter-spacing: 4px;
             margin-bottom: 10px;
         }
 
+        /* Changed h2 to h1 for SEO/A11y */
         .header-text p {
             font-size: 20px;
             margin: 20px 0 40px;
-            opacity: 0.8;
+            opacity: 0.9;
             letter-spacing: 2px;
         }
 
@@ -112,7 +112,7 @@
             display: inline-block;
             padding: 15px 40px;
             background: var(--accent);
-            color: var(--white);
+            color: #02071a;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
@@ -127,7 +127,6 @@
             box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
         }
 
-        /* Section Styling */
         section {
             padding: 100px 0;
         }
@@ -152,7 +151,6 @@
             border-radius: 2px;
         }
 
-        /* Skills with Percentage */
         .barWrapper {
             margin-bottom: 30px;
         }
@@ -190,7 +188,6 @@
             transition: 2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
         }
 
-        /* Achievements Styling */
         .achievement-item {
             position: relative;
             overflow: hidden;
@@ -203,7 +200,8 @@
         .achievement-item img {
             width: 100%;
             height: 250px;
-            object-fit: fill;
+            object-fit: cover;
+            object-position: center;
             transition: 0.5s;
         }
 
@@ -215,7 +213,6 @@
             transform: translateY(-10px);
         }
 
-        /* Card Box */
         .card-box {
             padding: 40px;
             background: var(--white);
@@ -237,7 +234,6 @@
             font-size: 16px;
         }
 
-        /* Certifications */
         .cert-card {
             text-align: center;
             padding: 30px;
@@ -268,7 +264,8 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"
+                    aria-label="Toggle Navigation">
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">SACHIN THOKAL</a>
@@ -286,176 +283,192 @@
         </div>
     </nav>
 
-    <section id="welcome-hero" class="welcome-hero">
-        <div class="container text-center">
-            <div class="header-text" data-aos="zoom-in" data-aos-duration="1500">
-                <h2>{{ data.profile.fullname }}</h2>
-                <p>{{ data.profile.tagline }}</p>
-                <a href="assets/download/{{ data.profile.resume }}" download><i class="fa fa-download"></i> DOWNLOAD
-                    RESUME</a>
-            </div>
-        </div>
-    </section>
+    <main id="main-content">
 
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="section-heading">
-                        <h2>Professional Bio</h2>
-                    </div>
-                    <p style="font-size: 17px; color: #555;">{{ data.profile.about }}</p>
-                    <hr>
-                    <div class="row">
-                        <div class="col-sm-6"><strong>Current Role:</strong>
-                            <p>{{ data.profile.designation }}</p>
-                        </div>
-                        <div class="col-sm-6"><strong>Company:</strong>
-                            <p>{{ data.profile.company }}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-5 col-md-offset-1" data-aos="fade-left">
-                    <img src="assets/images/about/{{ data.profile.profile_image }}" class="img-responsive"
-                        style="border-radius: 80px 20px 80px 20px; border: 6px solid #ffffff; box-shadow: 0 15px 30px rgba(0,0,0,0.12); transition: 0.4s;"
-                        onmouseover="this.style.borderRadius='20px 80px 20px 80px'"
-                        onmouseout="this.style.borderRadius='80px 20px 80px 20px'" alt="Sachin Thokal">
+        <section id="welcome-hero" class="welcome-hero">
+            <div class="container text-center">
+                <div class="header-text" data-aos="zoom-in" data-aos-duration="1500">
+                    <h1>{{ data.profile.fullname }}</h1>
+                    <p>{{ data.profile.tagline }}</p>
+                    <a href="assets/download/{{ data.profile.resume }}" download aria-label="Download Sachin's Resume">
+                        <i class="fa fa-download" aria-hidden="true"></i> DOWNLOAD RESUME
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" style="background:var(--bg-light)">
-        <div class="container">
-            <div class="section-heading" data-aos="fade-up">
-                <h2>Technical Expertise</h2>
-            </div>
-            <div class="row">
-                {% for skill in data.skills %}
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="barWrapper">
-                        <div class="skill-info">
-                            <span class="progressText">{{ skill.name }}</span>
-                            <span class="percentText">{{ skill.percentage }}%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width:{{ skill.percentage }}%"></div>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <div class="section-heading" data-aos="fade-up">
-                <h2>Work History</h2>
-            </div>
-            {% for exp in data.experience %}
-            <div class="card-box" data-aos="fade-up">
+        <section id="about">
+            <div class="container">
                 <div class="row">
-                    <div class="col-md-2">
-                        <div class="card-date">{{ exp.period }}</div>
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="section-heading">
+                            <h2>Professional Bio</h2>
+                        </div>
+                        <p style="font-size: 17px; color: var(--text-muted);">{{ data.profile.about }}</p>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-6"><strong>Current Role:</strong>
+                                <p>{{ data.profile.designation }}</p>
+                            </div>
+                            <div class="col-sm-6"><strong>Company:</strong>
+                                <p>{{ data.profile.company }}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-10">
-                        <h4 style="font-weight:700; color: var(--primary);">{{ exp.title }}</h4>
-                        <p style="color: var(--accent); font-weight: 600;">{{ exp.company }}</p>
-                        <p>{{ exp.description }}</p>
+                    <div class="col-md-5 col-md-offset-1" data-aos="fade-left">
+                        <img src="assets/images/about/{{ data.profile.profile_image }}" class="img-responsive"
+                            width="500" height="500"
+                            style="border-radius: 80px 20px 80px 20px; border: 6px solid #ffffff; box-shadow: 0 15px 30px rgba(0,0,0,0.12); transition: 0.4s;"
+                            onmouseover="this.style.borderRadius='20px 80px 20px 80px'"
+                            onmouseout="this.style.borderRadius='80px 20px 80px 20px'"
+                            alt="Sachin Thokal Professional Photo" loading="lazy">
                     </div>
                 </div>
             </div>
-            {% endfor %}
-        </div>
-    </section>
+        </section>
 
-    <section id="achievements" style="background: var(--white);">
-        <div class="container">
-            <div class="section-heading" data-aos="fade-up">
-                <h2>Key Achievements</h2>
+        <section id="skills" style="background:var(--bg-light)">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2>Technical Expertise</h2>
+                </div>
+                <div class="row">
+                    {% for skill in data.skills %}
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="barWrapper">
+                            <div class="skill-info">
+                                <span class="progressText">{{ skill.name }}</span>
+                                <span class="percentText">{{ skill.percentage }}%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width:{{ skill.percentage }}%"
+                                    aria-valuenow="{{ skill.percentage }}" aria-valuemin="0" aria-valuemax="100"
+                                    aria-label="{{ skill.name }} Proficiency">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
-            <div class="row">
-                {% for ach in data.achievements %}
-                <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="achievement-item">
-                        <img src="assets/images/portfolio/{{ ach.image }}" class="img-responsive" alt="Achievement">
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2>Work History</h2>
+                </div>
+                {% for exp in data.experience %}
+                <div class="card-box" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="card-date">{{ exp.period }}</div>
+                        </div>
+                        <div class="col-md-10">
+                            <h3 style="font-weight:700; color: var(--primary); font-size: 18px; margin-top: 0;">{{
+                                exp.title }}</h3>
+                            <p style="color: var(--accent); font-weight: 600;">{{ exp.company }}</p>
+                            <p>{{ exp.description }}</p>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="profiles" style="background:var(--bg-light)">
-        <div class="container">
-            <div class="section-heading" data-aos="fade-up">
-                <h2>Certifications</h2>
-            </div>
-            <div class="row">
-                {% for cert in data.certifications %}
-                <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
-                    <div class="cert-card">
-                        <img src="{{ cert.icon }}" width="60" alt="cert-icon">
-                        <h5 style="font-weight:700">{{ cert.short_name }}</h5>
-                        <p style="color: #888; font-size: 12px;">{{ cert.full_name }}</p>
-                    </div>
+        <section id="achievements" style="background: var(--white);">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2>Key Achievements</h2>
                 </div>
-                {% endfor %}
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" style="background: var(--primary); padding: 100px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <div class="section-heading">
-                        <h2 style="color: white;">Get In Touch</h2>
+                <div class="row">
+                    {% for ach in data.achievements %}
+                    <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="achievement-item">
+                            <img src="assets/images/portfolio/{{ ach.image }}" class="img-responsive" loading="lazy"
+                                alt="Achievement Screenshot" width="400" height="250">
+                        </div>
                     </div>
-                    <div class="contact-info" style="color: #bdc3c7; font-size: 16px;">
-                        <p><i class="fa fa-phone"></i> {{ data.contact.phone }}</p>
-                        <p><i class="fa fa-envelope"></i> {{ data.contact.email }}</p>
-                        <p><i class="fa fa-map-marker"></i> {{ data.profile.location }}</p>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <div
-                        style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
-                        <h4 style="color: white; margin-bottom:30px; font-weight: 600;">Wanna collaborate on a project?
-                        </h4>
-
-                        <button class="btn btn-block"
-                            style="background: #25d366; color: white; font-weight: 700; padding: 15px; border-radius: 50px; letter-spacing: 1px; border: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);"
-                            onmouseover="this.style.opacity='0.9'; this.style.transform='scale(1.02)';"
-                            onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';"
-                            onclick="const phone = '{{ data.contact.phone }}'.replace(/\D/g, ''); window.open('https://wa.me/' + phone + '?text=Hi Sachin, I saw your portfolio and would like to discuss a project!', '_blank')">
-                            <i class="fa fa-whatsapp" style="margin-right: 8px; font-size: 18px;"></i> CHAT ON WHATSAPP
-                        </button>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="profiles" style="background:var(--bg-light)">
+            <div class="container">
+                <div class="section-heading" data-aos="fade-up">
+                    <h2>Certifications</h2>
+                </div>
+                <div class="row">
+                    {% for cert in data.certifications %}
+                    <div class="col-sm-3" data-aos="flip-left" data-aos-delay="200">
+                        <div class="cert-card">
+                            <img src="{{ cert.icon }}" width="60" height="60" alt="{{ cert.short_name }} logo">
+                            <h3 style="font-weight:700; font-size: 16px;">{{ cert.short_name }}</h3>
+                            <p style="color: var(--text-muted); font-size: 12px;">{{ cert.full_name }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" style="background: var(--primary); padding: 100px 0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-right">
+                        <div class="section-heading">
+                            <h2 style="color: white;">Get In Touch</h2>
+                        </div>
+                        <div class="contact-info" style="color: #bdc3c7; font-size: 16px;">
+                            <p><i class="fa fa-phone" aria-hidden="true"></i> {{ data.contact.phone }}</p>
+                            <p><i class="fa fa-envelope" aria-hidden="true"></i> {{ data.contact.email }}</p>
+                            <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ data.profile.location }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-left">
+                        <div
+                            style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); text-align: center;">
+                            <h3 style="color: white; margin-bottom:30px; font-weight: 600; font-size: 20px;">Wanna
+                                collaborate on a project?</h3>
+                            <button class="btn btn-block"
+                                style="background: #25d366; color: white; font-weight: 700; padding: 15px; border-radius: 50px; letter-spacing: 1px; border: none; transition: 0.3s; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);"
+                                onmouseover="this.style.opacity='0.9'; this.style.transform='scale(1.02)';"
+                                onmouseout="this.style.opacity='1'; this.style.transform='scale(1)';"
+                                onclick="const phone = '{{ data.contact.phone }}'.replace(/\D/g, ''); window.open('https://wa.me/' + phone + '?text=Hi Sachin, I saw your portfolio and would like to discuss a project!', '_blank')">
+                                <i class="fa fa-whatsapp" style="margin-right: 8px; font-size: 18px;"
+                                    aria-hidden="true"></i> CHAT ON WHATSAPP
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="text-center" style="padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.05);">
         <p style="color: rgba(255,255,255,0.6); font-size: 14px; letter-spacing: 1px; margin: 0;">
             {{ data.footer.copyright }} |
-            <i class="fa fa-copyright"></i><span style="color: white; border-bottom: 1px solid var(--accent);"> Sachin
-                Thokal</span><i class="fa fa-heart" aria-hidden="true"
-                style="color: #ff0000; font-size: 14px; margin: 0 4px;"></i>
+            <i class="fa fa-copyright" aria-hidden="true"></i> <span
+                style="color: white; border-bottom: 1px solid var(--accent);">Sachin Thokal</span>
+            <i class="fa fa-heart" aria-hidden="true" style="color: #ff0000; font-size: 14px; margin: 0 4px;"></i>
         </p>
     </footer>
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
+        // Isse ye ensure hoga ki library load hone ke baad hi function chale
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 1000,
+                    once: true,
+                    offset: 100
+                });
+            }
         });
     </script>
 </body>

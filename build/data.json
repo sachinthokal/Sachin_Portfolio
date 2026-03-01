@@ -8,8 +8,8 @@
     "tagline": "A passionate DevOps Engineer focused on automation and continuous integration",
     "location": "Pune, Maharashtra",
     "about": "Experienced Devops Production Engineer with 4.9+ years of expertise in infrastructure automation, kubernetes orchestration, and multitasking support systems. Passionate about optimizing workflows and driving team productivity. I’m passionate about bridging the gap between development and operations, ensuring faster and more reliable software delivery. I thrive in challenging environments where innovation, collaboration, and problem-solving are key to success.",
-    "profile_image": "profile_image.jpg",
-    "banner_image": "welcome-banner.jpg",
+    "profile_image": "profile_image.webp",
+    "banner_image": "welcome-banner.webp",
     "resume": "Sachin_Thokal_Resume_V3.pdf"
   },
   "education": [
@@ -76,9 +76,9 @@
     }
   ],
   "achievements": [
-    { "image": "P1.jpg" },
-    { "image": "P2.jpg" },
-    { "image": "P3.jpg" }
+    { "image": "P1.webp" },
+    { "image": "P2.webp" },
+    { "image": "P3.webp" }
   ],
   "contact": {
     "phone": "+91 8804171399",
